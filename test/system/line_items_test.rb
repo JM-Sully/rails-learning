@@ -19,7 +19,6 @@ class LineItemsTest < ApplicationSystemTestCase
     click_on "Create Line item"
 
     assert_selector 'h2', text: 'Your Cart'
-    assert_selector 'td', text: "Programming Ruby 1.9"
   end
 
   test "updating a Line item" do

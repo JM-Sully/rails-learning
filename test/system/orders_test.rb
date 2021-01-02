@@ -11,6 +11,10 @@ class OrdersTest < ApplicationSystemTestCase
   end
 
   test "creating a Order" do
+    #put something in the cart
+    visit store_index_url
+    click_on "Add to Cart", match: :first
+
     visit orders_url
     click_on "New Order"
 

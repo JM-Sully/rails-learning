@@ -34,10 +34,10 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Address", with: @order.address
     fill_in "Email", with: @order.email
     fill_in "Name", with: @order.name
-    fill_in "Pay type", with: @order.pay_type
     click_on "Place Order"
 
     assert_text "Order was successfully updated"
+    click_on "Back"
   end
 
   test "destroying a Order" do

@@ -43,7 +43,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     patch product_url(@product), params: { 
       product: { 
         description: @product.description, 
-        image_url: @product.image_url, 
+        image_url: 'book_covers/lorem.jpg', 
         price: @product.price, 
         title: @title } }
     assert_redirected_to product_url(@product)
